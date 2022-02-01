@@ -48,10 +48,8 @@ function Time() {
    
 function darkMode() {
     const mode = document.querySelector("body");
-    console.log(mode);
     mode.classList.toggle("dark");
     const div = document.querySelector("#digital-clock");
-    console.log(div)
     div.classList.toggle("dark");
     const button = document.querySelector("#button")
     button.classList.toggle("dark")
