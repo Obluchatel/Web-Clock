@@ -16,6 +16,7 @@
  text-align: center;
  color: rgb(0, 0, 0);
  outline: none;
+ overflow: hidden;
 }
 
 #digital-clock.dark{ 
@@ -31,10 +32,16 @@
     text-align: center;
     color: rgb(255, 255, 255);
     outline: none;
+    overflow: hidden;
  }
 .dark{ 
-    background-color: #000000
+    background-color: #000000;
+    overflow: hidden;
  }
+ /* .white{ 
+    background-color: #ffffff;
+    overflow: hidden;
+ } */
 
 #button {
     margin: 0 auto;
@@ -46,6 +53,7 @@
     cursor: pointer;
     background-color: #ffffff;
     outline: none;
+    overflow: hidden;
  }
  #button.dark {
     background-color: #000000;
@@ -57,4 +65,5 @@
     border-radius: 4px;
     cursor: pointer;
     outline: none;
+    overflow: hidden;
  }
