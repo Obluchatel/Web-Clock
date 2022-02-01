@@ -19,7 +19,19 @@
 }
 
 #digital-clock.dark{ 
-    background-color: #000000
+    background-color: #000000;
+    border: none;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 256px;
+ /* font-kerning: auto;
+ font-weight: 1000; */
+    text-align: center;
+    color: rgb(255, 0, 0);
  }
 .dark{ 
     background-color: #000000
@@ -33,4 +45,17 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    background-color: #ffffff;
+    outline: none;
+ }
+ #button.dark {
+    background-color: #000000;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
  }

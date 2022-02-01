@@ -53,4 +53,6 @@ function darkMode() {
     const div = document.querySelector("#digital-clock");
     console.log(div)
     div.classList.toggle("dark");
+    const button = document.querySelector("#button")
+    button.classList.toggle("dark")
 }
