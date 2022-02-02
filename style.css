@@ -5,9 +5,9 @@
  background-color: #ffffff;
  width: auto;
  height: auto;
- margin: 0 auto;
- padding-top: 300px;
- padding-bottom: 300px;
+ margin: auto;
+ padding-top: 120px;
+ padding-bottom: 0;
  font-family: 'Open Sans Condensed', sans-serif;
  font-size: 256px;
  /* font-kerning: auto;
@@ -24,9 +24,9 @@
     border: none;
     width: auto;
     height: auto;
-    margin: 0 auto;
-    padding-top: 300px;
-    padding-bottom: 300px;
+    margin: auto;
+    padding-top: 0 auto;
+    padding-bottom: 0 auto;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 256px;
     text-align: center;
@@ -37,15 +37,14 @@
 .dark{ 
     background-color: #000000;
     overflow: hidden;
+    padding-top: 0 auto;
+    padding-bottom: 0 auto;
    }
 
 body {
    overflow: hidden;
+   align-items: center;
  }
- /* .white{ 
-    background-color: #ffffff;
-    overflow: hidden;
- } */
 
 #button {
     margin: 0 auto;
@@ -70,4 +69,38 @@ body {
     cursor: pointer;
     outline: none;
     overflow: hidden;
+ }
+ #date {
+   background-color: #ffffff;
+   width: auto;
+   height: auto;
+   margin: 0 auto;
+   /* padding-top: 300px;
+   padding-bottom: 300px; */
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 256px;
+   /* font-kerning: auto;
+   font-weight: 1000; */
+   border: none;
+   text-align: center;
+   color: rgb(0, 0, 0);
+   outline: none;
+   overflow: hidden;
+ }
+ #date.dark {
+   background-color: #000000;
+   width: auto;
+   height: auto;
+   margin: 0 auto;
+   /* padding-top: 300px;
+   padding-bottom: 300px; */
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 256px;
+   /* font-kerning: auto;
+   font-weight: 1000; */
+   border: none;
+   text-align: center;
+   color: rgb(255, 255, 255);
+   outline: none;
+   overflow: hidden;
  }
