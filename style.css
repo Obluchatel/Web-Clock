@@ -37,6 +37,10 @@
 .dark{ 
     background-color: #000000;
     overflow: hidden;
+   }
+
+body {
+   overflow: hidden;
  }
  /* .white{ 
     background-color: #ffffff;
