@@ -70,18 +70,3 @@ function darkMode() {
     const date = document.querySelector("#date")
     date.classList.toggle("dark")
 }
-// function dayoftheweek() {
-//     // var date = new Date();
-//     // var day = date.getDate();
-//     // var year = date.getFullYear();
-//     // var mounth = date.getUTCMonth();
-//     // if (mounth <= 11) {
-//     //     mounth = mounth+1;
-//     // }
-//     //  else {
-//     //     mounth;
-//     // }
-//     // document.getElementById("date").innerText = day +"."+ mounth + "." + year;
-//     // setTimeout(dayoftheweek, 1000);
-// }
-dayoftheweek();
