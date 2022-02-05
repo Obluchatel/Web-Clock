@@ -15,7 +15,7 @@ function Time() {
     } else {
     period = "AM";
     }
-    // Converting the hour in 12-hour format
+    // // Converting the hour in 12-hour format
     if (hour == 0) {
     hour = 12;
     } else {
@@ -39,10 +39,16 @@ function Time() {
     var year = date.getFullYear();
     var mounth = date.getUTCMonth();
     if (mounth <= 11) {
+        if (mounth < 10) {
         mounth = mounth+1;
+        mounth = ("0"+mounth)
+    }
     }
      else {
         mounth;
+    }
+    if (day < 10 ) {
+        day = ("0" + day)
     }
     document.getElementById("date").innerText = day +"."+ mounth + "." + year;
     // setTimeout(dayoftheweek, 1000);
@@ -59,7 +65,6 @@ function Time() {
    }
    Time();
 
-   
 function darkMode() {
     const mode = document.querySelector("body");
     mode.classList.toggle("dark");
@@ -70,3 +75,4 @@ function darkMode() {
     const date = document.querySelector("#date")
     date.classList.toggle("dark")
 }
+

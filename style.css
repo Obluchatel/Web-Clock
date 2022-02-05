@@ -4,10 +4,9 @@
 #digital-clock {
  background-color: #ffffff;
  width: 100%;
- padding-top: 12vh;
+ padding-top: 17vh;
  padding-bottom: 0vh;
  font-family: 'Open Sans Condensed', sans-serif;
- font-size: 15vw;
  border: none;
  text-align: center;
  color: rgb(0, 0, 0);
@@ -15,30 +14,24 @@
  overflow: hidden;
  text-shadow: 0px 0px 12px rgb(83, 83, 83);
 }
-
 #digital-clock.dark{ 
     background-color: #000000;
     border: none;
-    padding-top: 12vh;
+    padding-top: 17vh;
     padding-bottom: 0vh;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 15vw;
     text-align: center;
     color: rgb(255, 255, 255);
     outline: none;
     animation: none;
     text-shadow: 0px 0px 12px rgb(197, 196, 196);
-
-    
  }
 .dark{ 
     background-color: #000000;
    }
-
 body { 
    animation: none;
 }
-
 #button {
     margin: 0 auto;
     display: flex;
@@ -50,10 +43,6 @@ body {
     overflow: hidden;
     font-size: 15vw;
     width: 100%;
-    
-    
-    
-    
  }
  #button.dark {
     background-color: #000000;
@@ -63,7 +52,6 @@ body {
     cursor: pointer;
     outline: none;
     overflow: hidden;
-    
  }
  #date {
    background-color: #ffffff;
@@ -75,8 +63,6 @@ body {
    outline: none;
    overflow: hidden; 
    text-shadow: 0px 0px 12px rgb(83, 83, 83);
-
-   
  }
  #date.dark {
    background-color: #000000;
