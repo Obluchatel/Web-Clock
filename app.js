@@ -45,7 +45,7 @@ function Time() {
         mounth;
     }
     document.getElementById("date").innerText = day +"."+ mounth + "." + year;
-    setTimeout(dayoftheweek, 1000);
+    // setTimeout(dayoftheweek, 1000);
    }
     // Function to update time elements if they are less than 10
     // Append 0 before time elements if they are less than 10
