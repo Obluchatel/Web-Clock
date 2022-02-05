@@ -35,7 +35,9 @@
     background-color: #000000;
    }
 
-body { }
+body { 
+   animation: none;
+}
 
 #button {
     margin: 0 auto;
