@@ -3,7 +3,7 @@
 
 #digital-clock {
  background-color: #ffffff;
- width: auto;
+ width: 100%;
  padding-top: 12vh;
  padding-bottom: 0vh;
  font-family: 'Open Sans Condensed', sans-serif;
@@ -49,6 +49,8 @@ body {
     outline: none;
     overflow: hidden;
     font-size: 15vw;
+    width: 100%;
+    
     
     
     
