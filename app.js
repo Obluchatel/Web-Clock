@@ -1,3 +1,10 @@
+    var date = new Date();
+    // Get current hour
+    var hour = date.getHours();
+    // Get current minute
+    var minute = date.getMinutes();
+    // Get current second
+    var second = date.getSeconds();
 function Time() {
     // Creating object of the Date class
     var date = new Date();
@@ -32,6 +39,16 @@ function Time() {
     
     document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
     // Set Timer to 1 sec (1000 ms)
+    var element = document.getElementById("myprogressBar");   
+    var width = 1;
+      if (width >= 100) {
+        element.style.width = 0 + '%';
+        update_bar();
+      } else {
+        var percent = 100/60
+        width = width+(second*percent); 
+        element.style.width = (second*percent) + '%'; 
+      }
     setTimeout(Time, 1000);
 
     // adding the date to clock
@@ -54,6 +71,8 @@ function Time() {
     document.getElementById("date").innerText = day +"."+ mounth + "." + year;
     // setTimeout(dayoftheweek, 1000);
    }
+
+
     // Function to update time elements if they are less than 10
     // Append 0 before time elements if they are less than 10
 
@@ -81,20 +100,8 @@ function darkMode() {
 
 
 function update_bar() {
-    var dateoftheday = new Date();
-    var element = document.getElementById("myprogressBar");   
-    var width = 1;
-    var identity = setInterval(update_bar, 1000);
-      if (width >= 100) {
-        clearInterval(identity);
-        element.style.width = 0 + '%';
-        update_bar();
-      } else {
-        var percent = 100/60
-        width = width+(dateoftheday.getSeconds()*percent); 
-        element.style.width = (dateoftheday.getSeconds()*percent) + '%'; 
-        // element.innerHTML = (date.getSeconds()*percent) * 1  + '%';
-      }
+    // var dateoftheday = new Date();
+    
     }
 
  

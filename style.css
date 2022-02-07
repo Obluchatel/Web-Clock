@@ -83,7 +83,7 @@ body {
   
 #myprogressBar {
   width: 1%;
-  height: 7px;
+  height: 2px;
   background-color: #000000;
   border: none;
   text-align: center;
@@ -95,7 +95,7 @@ body {
 }
 #myprogressBar.dark {
    width: 1%;
-   height: 7px;
+   height: 2px;
    background-color: #ffffff;
    border: none;
    text-align: center;
