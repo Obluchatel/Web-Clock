@@ -33,6 +33,7 @@ function Time() {
     document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
     // Set Timer to 1 sec (1000 ms)
     setTimeout(Time, 1000);
+
     // adding the date to clock
     var date = new Date();
     var day = date.getDate();
@@ -55,6 +56,7 @@ function Time() {
    }
     // Function to update time elements if they are less than 10
     // Append 0 before time elements if they are less than 10
+
    function update(t) {
     if (t < 10) {
     return "0" + t;
@@ -64,7 +66,6 @@ function Time() {
     }
    }
    Time();
-
 function darkMode() {
     const mode = document.querySelector("body");
     mode.classList.toggle("dark");
@@ -74,5 +75,28 @@ function darkMode() {
     button.classList.toggle("dark")
     const date = document.querySelector("#date")
     date.classList.toggle("dark")
+    const myprogressBar = document.querySelector("#myprogressBar")
+    myprogressBar.classList.toggle("dark")
 }
+
+
+function update_bar() {
+    var dateoftheday = new Date();
+    var element = document.getElementById("myprogressBar");   
+    var width = 1;
+    var identity = setInterval(update_bar, 1000);
+      if (width >= 100) {
+        clearInterval(identity);
+        element.style.width = 0 + '%';
+        update_bar();
+      } else {
+        var percent = 100/60
+        width = width+(dateoftheday.getSeconds()*percent); 
+        element.style.width = (dateoftheday.getSeconds()*percent) + '%'; 
+        // element.innerHTML = (date.getSeconds()*percent) * 1  + '%';
+      }
+    }
+
+ 
+
 

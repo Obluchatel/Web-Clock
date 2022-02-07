@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html >
-  <head>
+  <head >
     <meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
     <title> Digital Clock </title>
     <link rel = "stylesheet" href = "style.css">
  </head>
  <body overflow = hidden>
     <button type=button id = "button" class="" onclick="darkMode()">
-      <link rel = "stylesheet" href = "style.css">
       <div id = "digital-clock"> 
       </div>
-      <script src = "app.js"> </script>
     </button>
 </body>
-<body overflow = hidden >
-    <link rel = "stylesheet" href = "style.css">
+<body overflow = hidden>
     <div id = "date" > 
     </div>
-    <script src = "app.js"> </script>
 </body>
+<footer overflow = hidden >
+  <div id="myprogressBar" >
+    <div id="myBar"></div>
+  </div>
+  <script src = "app.js" onload="update_bar()" id="myprogressBar"> </script>
+</footer>
 
 </html>

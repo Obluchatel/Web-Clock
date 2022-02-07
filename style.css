@@ -4,8 +4,8 @@
 #digital-clock {
  background-color: #ffffff;
  width: 100%;
- padding-top: 17vh;
- padding-bottom: 0vh;
+ padding-top: 15vh;
+ padding-bottom: 1vh;
  font-family: 'Open Sans Condensed', sans-serif;
  border: none;
  text-align: center;
@@ -17,8 +17,8 @@
 #digital-clock.dark{ 
     background-color: #000000;
     border: none;
-    padding-top: 17vh;
-    padding-bottom: 0vh;
+    padding-top: 15vh;
+    padding-bottom: 1vh;
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -75,5 +75,33 @@ body {
    animation: none;
    text-shadow: 0px 0px 12px rgb(197, 196, 196);
  }
-
-
+#Progress_Status {
+  width: 50%;
+  background-color: #ddd;
+  box-shadow: #000000;
+}
+  
+#myprogressBar {
+  width: 1%;
+  height: 7px;
+  background-color: #000000;
+  border: none;
+  text-align: center;
+  line-height: 32px;
+  color: black;
+  outline: none;
+  overflow: hidden; 
+  box-shadow: 0px 0px 12px rgb(83, 83, 83);
+}
+#myprogressBar.dark {
+   width: 1%;
+   height: 7px;
+   background-color: #ffffff;
+   border: none;
+   text-align: center;
+   line-height: 32px;
+   color: rgb(255, 255, 255);
+   outline: none;
+   overflow: hidden; 
+   box-shadow: 0px 0px 15px rgb(197, 196, 196);
+}
