@@ -1,10 +1,3 @@
-    var date = new Date();
-    // Get current hour
-    var hour = date.getHours();
-    // Get current minute
-    var minute = date.getMinutes();
-    // Get current second
-    var second = date.getSeconds();
 function Time() {
     // Creating object of the Date class
     var date = new Date();
@@ -17,19 +10,19 @@ function Time() {
     // Variable to store AM / PM
     var period = "";
     // Assigning AM / PM according to the current hour
-    if (hour >= 12) {
-    period = "PM";
-    } else {
-    period = "AM";
-    }
+    // if (hour >= 12) {
+    // period = "PM";
+    // } else {
+    // period = "AM";
+    // }
     // // Converting the hour in 12-hour format
-    if (hour == 0) {
-    hour = 12;
-    } else {
-    if (hour > 12) {
-    hour = hour - 12;
-    }
-    }
+    // if (hour == 0) {
+    // hour = 12;
+    // } else {
+    // if (hour > 12) {
+    // hour = hour - 12;
+    // }
+    // }
     // Updating hour, minute, and second
     // if they are less than 10
     hour = update(hour);
@@ -39,7 +32,7 @@ function Time() {
     
     document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
     // Set Timer to 1 sec (1000 ms)
-    var element = document.getElementById("myprogressBar");   
+    var element = document.getElementById("myprogressBar2");   
     var width = 1;
       if (width >= 100) {
         element.style.width = 0 + '%';
@@ -49,6 +42,26 @@ function Time() {
         width = width+(second*percent); 
         element.style.width = (second*percent) + '%'; 
       }
+      var element = document.getElementById("myprogressBar");   
+      var width = 1;
+        if (width >= 100) {
+          element.style.width = 0 + '%';
+          update_bar();
+        } else {
+          var percent = 100/60
+          width = width+(minute*percent); 
+          element.style.width = (minute*percent) + '%'; 
+        }
+        var element = document.getElementById("myprogressBar3");   
+        var width = 1;
+          if (width >= 100) {
+            element.style.width = 0 + '%';
+            update_bar();
+          } else {
+            var percent = 100/24
+            width = width+(hour*percent); 
+            element.style.width = (hour*percent) + '%'; 
+          }
     setTimeout(Time, 1000);
 
     // adding the date to clock
@@ -96,6 +109,10 @@ function darkMode() {
     date.classList.toggle("dark")
     const myprogressBar = document.querySelector("#myprogressBar")
     myprogressBar.classList.toggle("dark")
+    const myprogressBar2 = document.querySelector("#myprogressBar2")
+    myprogressBar2.classList.toggle("dark")
+    const myprogressBar3 = document.querySelector("#myprogressBar3")
+    myprogressBar3.classList.toggle("dark")
 }
 
 

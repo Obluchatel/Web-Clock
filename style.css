@@ -83,25 +83,79 @@ body {
   
 #myprogressBar {
   width: 1%;
-  height: 2px;
+  height: 7px;
   background-color: #000000;
   border: none;
   text-align: center;
   line-height: 32px;
   color: black;
   outline: none;
-  overflow: hidden; 
+  overflow: hidden;
+  transition: width 500ms linear;
   box-shadow: 0px 0px 12px rgb(83, 83, 83);
 }
 #myprogressBar.dark {
    width: 1%;
-   height: 2px;
+   height: 7px;
    background-color: #ffffff;
    border: none;
    text-align: center;
    line-height: 32px;
    color: rgb(255, 255, 255);
    outline: none;
-   overflow: hidden; 
+   overflow: hidden;
+   transition: width 500ms linear;
    box-shadow: 0px 0px 15px rgb(197, 196, 196);
 }
+#myprogressBar2 {
+   width: 1%;
+   height: 7px;
+   background-color: #ff0000;
+   border: none;
+   text-align: center;
+   line-height: 32px;
+   color: black;
+   outline: none;
+   overflow: hidden;
+   transition: width 500ms linear;
+   box-shadow: 0px 0px 12px rgb(83, 83, 83);
+ }
+ #myprogressBar2.dark {
+    width: 1%;
+    height: 7px;
+    background-color: #ff0000;
+    border: none;
+    text-align: center;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    overflow: hidden; 
+    transition: width 500ms linear;
+    box-shadow: 0px 0px 15px rgb(197, 196, 196);
+ }
+ #myprogressBar3 {
+   width: 1%;
+   height: 7px;
+   background-color: #000000;
+   border: none;
+   text-align: center;
+   line-height: 32px;
+   color: black;
+   outline: none;
+   overflow: hidden; 
+   transition: width 500ms linear;
+   box-shadow: 0px 0px 12px rgb(83, 83, 83);
+ }
+ #myprogressBar3.dark {
+    width: 1%;
+    height: 7px;
+    background-color: #ffffff;
+    border: none;
+    text-align: center;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    overflow: hidden; 
+    transition: width 500ms linear;
+    box-shadow: 0px 0px 15px rgb(197, 196, 196);
+ }
