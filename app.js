@@ -10,21 +10,6 @@ function Time() {
     // Variable to store AM / PM
     var period = "";
     // Assigning AM / PM according to the current hour
-    // if (hour >= 12) {
-    // period = "PM";
-    // } else {
-    // period = "AM";
-    // }
-    // // Converting the hour in 12-hour format
-    // if (hour == 0) {
-    // hour = 12;
-    // } else {
-    // if (hour > 12) {
-    // hour = hour - 12;
-    // }
-    // }
-    // Updating hour, minute, and second
-    // if they are less than 10
     hour = update(hour);
     minute = update(minute);
     second = update(second);
@@ -115,11 +100,21 @@ function darkMode() {
     myprogressBar3.classList.toggle("dark")
 }
 
+function getUserName() {
+  var nameField = document.getElementById('nameField').value;
+  var result = document.getElementById('result');
+  
+  if (nameField.length < 3) {
+      result.textContent = 'Username must contain at least 3 characters';
+      //alert('Username must contain at least 3 characters');
+  } else {
+      result.textContent = 'Your username is: ' + nameField;
+      //alert(nameField);
+  }
+  }
+  var subButton = document.getElementById('subButton');
+  subButton.addEventListener('click', getUserName, false); 
 
-function update_bar() {
-    // var dateoftheday = new Date();
-    
-    }
 
  
 
