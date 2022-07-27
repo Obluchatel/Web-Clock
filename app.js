@@ -123,8 +123,8 @@ async function weather2(lat, lon, API_key) {
 
 
 document.getElementById("weather_city_name").innerText = city_name;
-document.getElementById("weather_info").innerText = 'Feels like ' + feels_like + ' Min: ' + temp_min + ' Max: '+ temp_max;
-document.getElementById("sunset_sunrise").innerText = "sunrise: " + local_time(sunrise) + " " + "sunset: " +  local_time(sunset) 
+document.getElementById("weather_info").innerText = 'Feels like ' + feels_like + ' Min ' + temp_min + ' Max '+ temp_max;
+document.getElementById("sunset_sunrise").innerText = "Sunrise " + local_time(sunrise) + " " + "Sunset " +  local_time(sunset) 
 
 const img = document.querySelector("img"); 
 img.src = 'http://openweathermap.org/img/wn/'+icon_code+'@2x.png';
