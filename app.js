@@ -107,17 +107,24 @@ async function weather2(lat, lon, API_key) {
 
   const response = await fetch(request);
   const weather2 = await response.json();
-  console.log(weather2['main'])
   const icon_code = weather2['weather']['0']['icon']
-let city_name = weather2['name']
-let feels_like = weather2['main']['feels_like']
-let temp_min = weather2['main']['temp_min']
-let temp_max = weather2['main']['temp_max']
-let sunrise = weather2['sys']['sunrise']
-let sunset = weather2['sys']['sunset']
+  let city_name = weather2['name']
+  let feels_like = weather2['main']['feels_like']
+  let temp_min = weather2['main']['temp_min']
+  let temp_max = weather2['main']['temp_max']
+  let sunrise =  weather2['sys']['sunrise']
+  let sunset = weather2['sys']['sunset']
+  function local_time(timestamp){
+    dateObj = new Date(timestamp * 1000)
+    utcString = dateObj.toString()
+    time = utcString.slice(-48, -43);
+    return time
+  }
+
 
 document.getElementById("weather_city_name").innerText = city_name;
-document.getElementById("weather_info").innerText = 'Feels like ' + feels_like + ' Min: ' + temp_min + ' Max: '+ temp_max
+document.getElementById("weather_info").innerText = 'Feels like ' + feels_like + ' Min: ' + temp_min + ' Max: '+ temp_max;
+document.getElementById("sunset_sunrise").innerText = "sunrise: " + local_time(sunrise) + " " + "sunset: " +  local_time(sunset) 
 
 const img = document.querySelector("img"); 
 img.src = 'http://openweathermap.org/img/wn/'+icon_code+'@2x.png';
@@ -127,20 +134,20 @@ img.src = 'http://openweathermap.org/img/wn/'+icon_code+'@2x.png';
 weather2('51.107883', '17.03853', '6e8cafa242a6b13d93489c5311e00a79')
 
 
-function getUserName() {
-  var nameField = document.getElementById('nameField').value;
-  var result = document.getElementById('result');
+// function getUserName() {
+//   var nameField = document.getElementById('nameField').value;
+//   var result = document.getElementById('result');
   
-  if (nameField.length < 3) {
-      result.textContent = 'Username must contain at least 3 characters';
-      //alert('Username must contain at least 3 characters');
-  } else {
-      result.textContent = 'Your username is: ' + nameField;
-      //alert(nameField);
-  }
-  }
-  var subButton = document.getElementById('subButton');
-  subButton.addEventListener('click', getUserName, false); 
+//   if (nameField.length < 3) {
+//       result.textContent = 'Username must contain at least 3 characters';
+//       //alert('Username must contain at least 3 characters');
+//   } else {
+//       result.textContent = 'Your username is: ' + nameField;
+//       //alert(nameField);
+//   }
+//   }
+//   var subButton = document.getElementById('subButton');
+//   subButton.addEventListener('click', getUserName, false); 
 
 
  
