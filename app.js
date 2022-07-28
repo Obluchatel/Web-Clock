@@ -69,11 +69,6 @@ function Time() {
     document.getElementById("date").innerText = day +"."+ mounth + "." + year;
     // setTimeout(dayoftheweek, 1000);
    }
-
-
-    // Function to update time elements if they are less than 10
-    // Append 0 before time elements if they are less than 10
-
    function update(t) {
     if (t < 10) {
     return "0" + t;
@@ -98,8 +93,8 @@ function darkMode() {
     myprogressBar2.classList.toggle("dark")
     const myprogressBar3 = document.querySelector("#myprogressBar3")
     myprogressBar3.classList.toggle("dark")
+    
 }
-
 async function weather2(lat, lon, API_key) {
 
   const requestURL = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+API_key+'&units=metric';
@@ -130,26 +125,15 @@ const img = document.querySelector("img");
 img.src = 'http://openweathermap.org/img/wn/'+icon_code+'@2x.png';
 
 }
-
 weather2('51.107883', '17.03853', '6e8cafa242a6b13d93489c5311e00a79')
+async function getquote() {
+  const requestURL_quote = 'https://en.wikiquote.org/api/rest_v1/page/random/summary';
+  const request_quote = new Request(requestURL_quote);
 
-
-// function getUserName() {
-//   var nameField = document.getElementById('nameField').value;
-//   var result = document.getElementById('result');
-  
-//   if (nameField.length < 3) {
-//       result.textContent = 'Username must contain at least 3 characters';
-//       //alert('Username must contain at least 3 characters');
-//   } else {
-//       result.textContent = 'Your username is: ' + nameField;
-//       //alert(nameField);
-//   }
-//   }
-//   var subButton = document.getElementById('subButton');
-//   subButton.addEventListener('click', getUserName, false); 
-
-
+  const response_quote = await fetch(request_quote);
+  const quote = await response_quote.json();
+  document.getElementById("title").innerText = quote["title"];
+  document.getElementById("summary").innerHTML = quote["extract_html"];
  
-
-
+}
+getquote()

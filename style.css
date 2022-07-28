@@ -4,6 +4,7 @@
 #digital-clock {
  background-color: #ffffff;
  width: 100%;
+ font-size: 9vw;
  font-family: 'Open Sans Condensed', sans-serif;
  border: none;
  text-align: center;
@@ -31,7 +32,7 @@ body {
 
 #weather {
  background-color: #ffffff;
- font-size: 25px;
+ font-size: 2vw;
  width: 100%;
  font-family: 'Open Sans Condensed', sans-serif;
  border: none;
@@ -61,7 +62,6 @@ body {
     background-color: #ffffff;
     outline: none;
     overflow: hidden;
-    font-size: 15vw;
     width: 100%;
  }
  #button.dark {
@@ -76,7 +76,7 @@ body {
  #date {
    background-color: #ffffff;
    font-family: 'Open Sans Condensed', sans-serif;
-   font-size: 15vw;
+   font-size: 6vw;
    border: none;
    text-align: center;
    color: rgb(0, 0, 0);
@@ -87,7 +87,6 @@ body {
  #date.dark {
    background-color: #000000;
    font-family: 'Open Sans Condensed', sans-serif;
-   font-size: 15vw;
    border: none;
    text-align: center;
    color: rgb(255, 255, 255);
@@ -103,7 +102,7 @@ body {
   
 #myprogressBar {
   width: 1%;
-  height: 7px;
+  height: 0.5vw;
   background-color: #000000;
   border: none;
   text-align: center;
@@ -116,7 +115,6 @@ body {
 }
 #myprogressBar.dark {
    width: 1%;
-   height: 7px;
    background-color: #ffffff;
    border: none;
    text-align: center;
@@ -129,7 +127,7 @@ body {
 }
 #myprogressBar2 {
    width: 1%;
-   height: 7px;
+   height: 0.5vw;
    background-color: #ff0000;
    border: none;
    text-align: center;
@@ -142,7 +140,6 @@ body {
  }
  #myprogressBar2.dark {
     width: 1%;
-    height: 7px;
     background-color: #ff0000;
     border: none;
     text-align: center;
@@ -155,7 +152,7 @@ body {
  }
  #myprogressBar3 {
    width: 1%;
-   height: 7px;
+   height: 0.5vw;
    background-color: #000000;
    border: none;
    text-align: center;
@@ -168,7 +165,6 @@ body {
  }
  #myprogressBar3.dark {
     width: 1%;
-    height: 7px;
     background-color: #ffffff;
     border: none;
     text-align: center;
