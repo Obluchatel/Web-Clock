@@ -137,3 +137,51 @@ async function getquote() {
  
 }
 getquote()
+
+async function get_current_playing_track() {
+  // const spotify_URL = placeholder
+  const request_spotify = new Request(spotify_URL);
+  const response_spotify = await fetch(request_spotify);
+  const current_track = await response_spotify.json();
+  console.log(current_track["is_playing"])
+  // document.getElementById("title").innerText = current_track["title"];
+ 
+}
+get_current_playing_track()
+
+
+
+var request = require('request'); // "Request" library
+
+var client_id = 'CLIENT_ID'; // Your client id
+var client_secret = 'CLIENT_SECRET'; // Your secret
+
+// your application requests authorization
+var authOptions = {
+  url: 'https://accounts.spotify.com/api/token',
+  headers: {
+    'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
+  },
+  form: {
+    grant_type: 'client_credentials'
+  },
+  json: true
+};
+
+request.post(authOptions, function(error, response, body) {
+  if (!error && response.statusCode === 200) {
+
+    // use the access token to access the Spotify Web API
+    var token = body.access_token;
+    var options = {
+      url: 'https://api.spotify.com/v1/users/jmperezperez',
+      headers: {
+        'Authorization': 'Bearer ' + token
+      },
+      json: true
+    };
+    request.get(options, function(error, response, body) {
+      console.log(body);
+    });
+  }
+});
