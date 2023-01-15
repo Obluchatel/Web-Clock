@@ -1,22 +1,13 @@
 function Time() {
-    // Creating object of the Date class
     var date = new Date();
-    // Get current hour
     var hour = date.getHours();
-    // Get current minute
     var minute = date.getMinutes();
-    // Get current second
     var second = date.getSeconds();
-    // Variable to store AM / PM
     var period = "";
-    // Assigning AM / PM according to the current hour
     hour = update(hour);
     minute = update(minute);
     second = update(second);
-    // Adding time elements to the div
-    
     document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
-    // Set Timer to 1 sec (1000 ms)
     var element = document.getElementById("myprogressBar2");   
     var width = 1;
       if (width >= 100) {
@@ -67,7 +58,6 @@ function Time() {
         day = ("0" + day)
     }
     document.getElementById("date").innerText = day +"."+ mounth + "." + year;
-    // setTimeout(dayoftheweek, 1000);
    }
    function update(t) {
     if (t < 10) {
@@ -138,50 +128,3 @@ async function getquote() {
 }
 getquote()
 
-async function get_current_playing_track() {
-  // const spotify_URL = placeholder
-  const request_spotify = new Request(spotify_URL);
-  const response_spotify = await fetch(request_spotify);
-  const current_track = await response_spotify.json();
-  console.log(current_track["is_playing"])
-  // document.getElementById("title").innerText = current_track["title"];
- 
-}
-get_current_playing_track()
-
-
-
-var request = require('request'); // "Request" library
-
-var client_id = 'CLIENT_ID'; // Your client id
-var client_secret = 'CLIENT_SECRET'; // Your secret
-
-// your application requests authorization
-var authOptions = {
-  url: 'https://accounts.spotify.com/api/token',
-  headers: {
-    'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
-  },
-  form: {
-    grant_type: 'client_credentials'
-  },
-  json: true
-};
-
-request.post(authOptions, function(error, response, body) {
-  if (!error && response.statusCode === 200) {
-
-    // use the access token to access the Spotify Web API
-    var token = body.access_token;
-    var options = {
-      url: 'https://api.spotify.com/v1/users/jmperezperez',
-      headers: {
-        'Authorization': 'Bearer ' + token
-      },
-      json: true
-    };
-    request.get(options, function(error, response, body) {
-      console.log(body);
-    });
-  }
-});
